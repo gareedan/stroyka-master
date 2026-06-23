@@ -7,26 +7,37 @@ import Contact from './views/ContactsView.vue'
 import Delivery from './views/DeliveryView.vue'
 import Document from './views/DocumentView.vue'
 import Refund from './views/RefundView.vue'
+
 const router = createRouter({
     routes: [
         {
             path: '/',
+            name: 'home',
             component: HomeView
         },
         {
-            path: '/',
+            path: '/brands',
+            name: 'brands',
             component: Brend
-        },{
-            path: '/',
+        },
+        {
+            path: '/contacts',
+            name: 'contacts',
             component: Contact
-        },{
-            path: '/',
+        },
+        {
+            path: '/delivery',
+            name: 'delivery',
             component: Delivery
-        },{
-            path: '/',
+        },
+        {
+            path: '/document',
+            name: 'document',
             component: Document
-        },{
-            path: '/',
+        },
+        {
+            path: '/refund',
+            name: 'refund',
             component: Refund
         },
     ],

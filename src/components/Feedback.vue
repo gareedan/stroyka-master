@@ -38,7 +38,6 @@ export default {
     }
   },
   mounted() {
-    // Автоматическое переключение слайдов
     setInterval(() => {
       if (this.currentSlide < this.slidesCount - 1) {
         this.currentSlide++
@@ -82,25 +81,25 @@ export default {
           :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
       >
         <div
-            v-for="(review, index) in groupedReviews"
+            v-for="(reviewGroup, index) in groupedReviews"
             :key="index"
             class="review-slide"
         >
           <div
-              v-for="item in review"
+              v-for="item in reviewGroup"
               :key="item.id"
               class="review-card"
           >
             <div class="review-author">
               <span class="author-icon">
-                <img src="@/images/Avatars.svg" alt="">
+                <img src="@/images/Avatars.svg" alt="avatar" />
               </span>
               <div class="author-info">
                 <span class="author-name">{{ item.name }}</span>
+                <span class="review-date">{{ item.date }}</span>
               </div>
             </div>
             <p class="review-text">{{ item.text }}</p>
-            <span class="review-date">{{ item.date }}</span>
           </div>
         </div>
       </div>
@@ -118,7 +117,6 @@ export default {
 .reviews-slider {
   max-width: 1200px;
   width: 100%;
-  height: 100%;
   margin: 40px auto 0;
   padding: 0 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -132,7 +130,7 @@ export default {
 }
 
 .reviews-header h2 {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
   color: #1a1a2e;
   margin: 0;
@@ -176,11 +174,7 @@ export default {
 
 .slider-container {
   overflow: hidden;
-  margin-bottom: 20px;
-  max-width: 60%;
-  height: 80% ;
-
-
+  border-radius: 12px;
 }
 
 .slider-track {
@@ -193,34 +187,35 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  padding: 0 10px;
 }
 
 .review-card {
-  background: #F6F6F6;
+  background: #ffffff;
   border: 1px solid #e8e9ea;
   border-radius: 12px;
-  padding: 24px;
-  height: 100%;
-  transition: box-shadow 0.25s ease;
+  padding: 32px 34px;
+  min-height: 280px;
   display: flex;
   flex-direction: column;
+  transition: box-shadow 0.25s ease;
+  width: 100%;
 }
 
 .review-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .review-author {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
+  flex-shrink: 0;
 }
 
 .author-icon {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: #2d7aff;
   display: flex;
@@ -242,23 +237,40 @@ export default {
 }
 
 .author-name {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 600;
-  color: #2F323A;
+  color: #1a1a2e;
+  margin-bottom: 2px;
 }
 
 .review-date {
-  font-size: 13px;
+  font-size: 14px;
   color: #8b8d92;
-  margin-top: 2px;
 }
 
 .review-text {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #2F323A;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #2d2d44;
   margin: 0;
   flex: 1;
+  overflow-y: auto;
+  word-wrap: break-word;
+  white-space: pre-wrap;
 }
 
+/* Стили для скролла внутри карточки */
+.review-text::-webkit-scrollbar {
+  width: 4px;
+}
+
+.review-text::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.review-text::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
 </style>

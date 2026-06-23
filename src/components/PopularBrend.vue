@@ -7,10 +7,10 @@
 <div class="container">
   <div class="RowFirst">
     <h1>Популярные бренды</h1>
-    <a href="#" class="all-sales">
+    <router-link to="/Brend" class="all-sales">
       Все бренды
       <img src="../images/rightArrow.svg" alt="Стрелка" />
-    </a>
+    </router-link>
   </div>
   <div class="Row">
       <img src="../images/brend/Bever.svg" alt="">
@@ -44,7 +44,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 20px;]
+  padding: 20px;
   margin: 0 20px;
 }
 .container img{

@@ -1,0 +1,344 @@
+{
+  "brands": {
+    "A": [
+      "ASB-Woodline",
+      "AVS",
+      "Alma Ceramica",
+      "Alvaro-Banos",
+      "Am.Pm",
+      "Apecs",
+      "Appetite",
+      "Attribute",
+      "Auto Standart",
+      "Axima",
+      "Azario"
+    ],
+    "B": [
+      "BLB",
+      "BOYSCOUT",
+      "BRAVAT",
+      "Belani",
+      "Belezza",
+      "Belinka",
+      "Blocker",
+      "Bosch",
+      "Bostik",
+      "Braver",
+      "Bussare"
+    ],
+    "C": [
+      "Cemmix",
+      "Ceramica Konskie",
+      "Ceresit"
+    ],
+    "D": [
+      "DAP",
+      "DARIIS",
+      "Damixa",
+      "Deco Room",
+      "Decoretto",
+      "Docke",
+      "Dora",
+      "Dufa",
+      "Dulux",
+      "Duschy"
+    ],
+    "E": [
+      "EKF",
+      "ESKO",
+      "EUROTEX",
+      "Egger",
+      "Element",
+      "Elfe",
+      "Elysium",
+      "Energizer",
+      "Energy",
+      "Erismann",
+      "Estima"
+    ],
+    "F": [
+      "Fischer",
+      "Fora"
+    ],
+    "G": [
+      "GP BATTERIES",
+      "GRANICOM",
+      "GSHOSE",
+      "Gauss",
+      "Gayafores",
+      "Giaretti",
+      "Gimi",
+      "GlobalTile",
+      "Golden Tile",
+      "Goldman",
+      "Gracia Ceramica",
+      "Grinda",
+      "Grohe"
+    ],
+    "H": [
+      "HARO",
+      "HEGEL",
+      "HELP",
+      "HENKEL",
+      "Hammer",
+      "Hobby",
+      "Home Color",
+      "Husky",
+      "Huter"
+    ],
+    "I": [
+      "IEK",
+      "IKA",
+      "IVC",
+      "Ideal"
+    ],
+    "J": [
+      "Jika"
+    ],
+    "K": [
+      "KLEO",
+      "Karcher",
+      "Kerama Marazzi",
+      "Kiilto",
+      "Kolner",
+      "Komar",
+      "Kraftool",
+      "Krass",
+      "Kronostar"
+    ],
+    "L": [
+      "LUX",
+      "LaFavola",
+      "Lasselsberger",
+      "Legrand",
+      "Lemark",
+      "Lemax",
+      "Leonord"
+    ],
+    "M": [
+      "METALTEX",
+      "MONETA",
+      "Makel",
+      "Makita",
+      "Mallony",
+      "Marburg",
+      "Marmiton",
+      "Marshall",
+      "Matrix",
+      "Meiwa Gravure Co., Ltd",
+      "Milardo",
+      "Monopole",
+      "Murol"
+    ],
+    "N": [
+      "NRAVA HOME",
+      "Norta"
+    ],
+    "O": [
+      "OLFA"
+    ],
+    "P": [
+      "P&P",
+      "PALLADIUM",
+      "PROSEPT",
+      "Palisad",
+      "Park",
+      "Pasabahce",
+      "Phibo",
+      "Plast team",
+      "Polynor",
+      "Power Cube"
+    ],
+    "Q": [
+      "Quick-Step"
+    ],
+    "R": [
+      "Rasch",
+      "Realistik",
+      "Regent",
+      "Rehau",
+      "Roca",
+      "Rossinka"
+    ],
+    "S": [
+      "Safeline",
+      "Salag",
+      "Santool",
+      "Schneider Electric",
+      "Sheffilton",
+      "Soudal",
+      "Stayer",
+      "Swensa"
+    ],
+    "T": [
+      "T4P",
+      "TRIUMPH NORD",
+      "Tarkett",
+      "Thermo",
+      "Tokito",
+      "Toplight"
+    ],
+    "U": [
+      "UNICUM",
+      "UNIVERSAL",
+      "Unibob",
+      "Unicorn"
+    ],
+    "V": [
+      "VIDIMA",
+      "VODA",
+      "Vents",
+      "Vernissage",
+      "Vincent",
+      "Vortex"
+    ],
+    "W": [
+      "WAGO",
+      "Wester"
+    ],
+    "Z": [
+      "Zalger",
+      "Ziber"
+    ],
+    "А": [
+      "АНИ",
+      "АСБ-Мебель",
+      "Авангард",
+      "Аист",
+      "Аквафор",
+      "Альпа",
+      "Алюмет",
+      "Арей",
+      "Артекс",
+      "Астрохим"
+    ],
+    "Б": [
+      "Банные штучки",
+      "Барьер",
+      "Белвинил",
+      "Брянские обои",
+      "Бытпласт"
+    ],
+    "Г": [
+      "Гипрофи"
+    ],
+    "Д": [
+      "Двери.ру",
+      "Дверной Континент",
+      "Делга",
+      "Дельфа",
+      "Джоби",
+      "ДорВуд",
+      "Дэта"
+    ],
+    "Е": [
+      "Еврокерамика",
+      "Едим Дома"
+    ],
+    "Ж": [
+      "Жук"
+    ],
+    "З": [
+      "Зеленая Аптека Садовода",
+      "Зенит",
+      "Зубр"
+    ],
+    "И": [
+      "Индустрия",
+      "Итана"
+    ],
+    "К": [
+      "Кедр",
+      "Керамин",
+      "Колор Эксперт",
+      "Колорит",
+      "Комарофф",
+      "Контакт",
+      "Континент",
+      "Кукморский завод Металлопосуды"
+    ],
+    "Л": [
+      "Лакра",
+      "Лесенка",
+      "Лесма",
+      "Лесозавод",
+      "Лесстройпроект",
+      "Луга",
+      "Лукойл"
+    ],
+    "М": [
+      "Макрофлекс"
+    ],
+    "Н": [
+      "Нева Тафт",
+      "Нрава",
+      "Нэфис"
+    ],
+    "О": [
+      "ОКСО",
+      "Олимп",
+      "Ондулин",
+      "Орио"
+    ],
+    "П": [
+      "ПРОМЕТ",
+      "Пинотекс",
+      "Пластик Репаблик",
+      "Пластмаркет",
+      "Полимербыт",
+      "Политэк",
+      "Промрукав",
+      "Профильдорс",
+      "Профилюкс"
+    ],
+    "Р": [
+      "Ресанта",
+      "Рифар",
+      "Рыжий кот"
+    ],
+    "С": [
+      "СИБИН",
+      "СТН",
+      "Сантек",
+      "Саратовские обои",
+      "Сельмаш",
+      "Сибртех",
+      "СоюзБалтКомплект",
+      "Спарта",
+      "Ставр",
+      "Стальэмаль",
+      "Старатели",
+      "Строитель",
+      "Ступино"
+    ],
+    "Т": [
+      "ТДВ",
+      "ТОРН",
+      "Твоя Планета",
+      "Технолайн",
+      "Тритон"
+    ],
+    "У": [
+      "Уют"
+    ],
+    "Ф": [
+      "Фаско",
+      "Фертика",
+      "Формат",
+      "Фрекен Бок"
+    ],
+    "Ш": [
+      "Шахтинская плитка",
+      "Штрих"
+    ],
+    "Э": [
+      "ЭКО",
+      "Эко НОМ",
+      "Эксперт"
+    ],
+    "Я": [
+      "Яр краски",
+      "Ярославский антисептик"
+    ]
+  }
+}
