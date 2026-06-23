@@ -82,17 +82,15 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+
   padding: 20px;
 }
 
 .popular-all {
   max-width: 1200px;
   width: 100%;
-  background: #ffffff;
   border-radius: 16px;
   padding: 24px 32px 32px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .popular-FirstRow {
@@ -108,26 +106,51 @@ export default defineComponent({
   color: #2F323A;
   letter-spacing: -0.2px;
 }
-
 .all-categories-btn {
   display: flex;
   align-items: center;
   gap: 6px;
   background: none;
   border: none ;
+  border-radius: 5px;
   padding: 8px 16px 8px 20px;
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
   color: #3CC6F1;
 }
-
-
-
 .all-categories-btn span {
   color: #3CC6F1;
 }
+.all-categories-btn:hover {
+  background: #16AFF0;
+  color: white;
+  transition: 0.5ms;
+}
+.all-categories-btn span:hover {
+  color:white;
+  transition: 0.5ms;
+}
+.all-categories-btn:active {
+background: #2F323A;
+  color: white;
+  transition: 0.5ms;
+}
+.all-categories-btn span:active {
+  color: white;
+  transition: 0.5ms;
+}
 
+.all-categories-btn img {
+  filter: brightness(0) saturate(100%) invert(40%) sepia(100%) saturate(1000%) hue-rotate(200deg);
+}
+
+.all-categories-btn:hover img {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+.all-categories-btn:active img {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
 
 
 

@@ -1,0 +1,112 @@
+{
+  "sales": [
+    {
+      "id": 1,
+      "title": "Керамогранит Yasmin 598x185 коричневый C-YA4M112D",
+      "price": 899,
+      "oldPrice": 0,
+      "discount": 0,
+      "image": "/imagesPublic/keramogranit.svg",
+      "description": "Керамогранит коричневого цвета, размер 598x185 мм. Идеален для отделки пола и стен."
+    },
+    {
+      "id": 2,
+      "title": "Затирка для узких швов Ceresit CE 33, цвет белый, 2 кг",
+      "price": 275,
+      "oldPrice": 0,
+      "discount": 0,
+      "image": "/imagesPublic/ceresit-ce33.svg",
+      "description": "Затирка для узких швов Ceresit CE 33, белая, 2 кг. Для заполнения швов между плиткой."
+    },
+    {
+      "id": 3,
+      "title": "Грунтовка Старатели 10л глубокого проникновения",
+      "price": 839,
+      "oldPrice": 0,
+      "discount": 0,
+      "image": "/imagesPublic/gruntovka.svg",
+      "description": "Грунтовка глубокого проникновения для укрепления и подготовки поверхностей. Объем 10 л."
+    },
+    {
+      "id": 4,
+      "title": "Гипсокартон Волма, 2500 x 1200 x 12,5 мм",
+      "price": 335,
+      "oldPrice": 0,
+      "discount": 0,
+      "image": "/imagesPublic/gipsokarton.svg",
+      "description": "Гипсокартонный лист Волма, размер 2500x1200x12,5 мм. Для выравнивания стен и потолков."
+    },
+    {
+      "id": 5,
+      "title": "Профиль 0,55мм для гипсокартона",
+      "price": 195,
+      "oldPrice": 0,
+      "discount": 0,
+      "image": "/imagesPublic/profil.svg",
+      "description": "Металлический профиль толщиной 0,55 мм для монтажа гипсокартонных конструкций."
+    },
+    {
+      "id": 6,
+      "title": "Рулетка 3м",
+      "price": 100,
+      "oldPrice": 0,
+      "discount": 0,
+      "image": "/imagesPublic/ruletka.svg",
+      "description": "Рулетка измерительная длиной 3 метра. Для точных замеров в строительстве и ремонте."
+    },
+    {
+      "id": 7,
+      "title": "Кнауф Мп 75 штукатурка гипсовая МН 30кг",
+      "price": 380,
+      "oldPrice": 0,
+      "discount": 0,
+      "image": "/imagesPublic/knauf-mp75.svg",
+      "description": "Гипсовая штукатурка Кнауф Мп 75, 30 кг. Для выравнивания стен и потолков."
+    },
+    {
+      "id": 8,
+      "title": "Уголок серый канализационный Д110 ГР90",
+      "price": 335,
+      "oldPrice": 0,
+      "discount": 0,
+      "image": "/imagesPublic/ugolok.svg",
+      "description": "Серый канализационный уголок диаметром 110 мм, угол 90 градусов."
+    },
+    {
+      "id": 9,
+      "title": "Knauf Ротбанд, 30 кг",
+      "price": 508,
+      "oldPrice": 0,
+      "discount": 0,
+      "image": "/imagesPublic/rotband.svg",
+      "description": "Гипсовая штукатурка Knauf Ротбанд, 30 кг. Универсальная смесь для выравнивания стен."
+    },
+    {
+      "id": 10,
+      "title": "Саморез по металлу 3,5x25 мм для гипсокартона",
+      "price": 340,
+      "oldPrice": 0,
+      "discount": 0,
+      "image": "/imagesPublic/samorez.svg",
+      "description": "Саморезы по металлу для гипсокартона, размер 3,5x25 мм. Упаковка."
+    },
+    {
+      "id": 11,
+      "title": "Шпатлевка универсальная Danogips SuperFinish 17 л",
+      "price": 2555,
+      "oldPrice": 0,
+      "discount": 0,
+      "image": "/imagesPublic/shpatlevka.svg",
+      "description": "Универсальная шпатлевка Danogips SuperFinish, 17 л. Для финишной отделки поверхностей."
+    },
+    {
+      "id": 12,
+      "title": "Клейкая лента металлизированная Изоспан FL 5x5000 см",
+      "price": 226,
+      "oldPrice": 0,
+      "discount": 0,
+      "image": "/imagesPublic/izospan-fl.svg",
+      "description": "Металлизированная клейкая лента Изоспан FL, размер 5x5000 см. Для пароизоляции и гидроизоляции."
+    }
+  ]
+}

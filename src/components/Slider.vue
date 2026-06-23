@@ -57,13 +57,14 @@ export default {
   width: 100%;
   max-width: 1320px;
   height: 420px;
-  margin: 0 auto;
+  margin: 40px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #F6F6F6;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .slider {
@@ -79,12 +80,14 @@ export default {
   height: 100%;
   transition: transform 0.8s ease-in-out;
   will-change: transform;
+
 }
 
 .slide {
   min-width: 100%;
   height: 100%;
   flex-shrink: 0;
+
 }
 
 .slide img {
@@ -92,6 +95,7 @@ export default {
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 10px;
 }
 
 /* Кнопки управления */

@@ -1,6 +1,6 @@
 <script setup>
 import products from '../stores/products.json'
-
+import Btn_Buy from '../components/ComponentsMini/Btn_Buy.vue'
 </script>
 
 <template>
@@ -26,7 +26,8 @@ import products from '../stores/products.json'
         </div>
 
         <div class="product-info">
-          <div class="product-title">            {{ item.title }}
+          <div class="product-title">
+            {{ item.title }}
           </div>
 
           <div class="price-row">
@@ -34,15 +35,18 @@ import products from '../stores/products.json'
             <span class="old-price">{{ item.oldPrice }} ₽</span>
           </div>
 
-          <button class="cart-btn">
-            В корзину
-          </button>
+
+          <Btn_Buy
+              :item="item"
+              @add-to-cart="handleAddToCart"
+              @update-cart="handleUpdateCart"
+              @remove-from-cart="handleRemoveFromCart"
+          />
         </div>
       </div>
     </div>
   </div>
 </template>
-
 <style scoped>
 * {
   margin: 0;
@@ -55,7 +59,7 @@ import products from '../stores/products.json'
   width: 100%;
   margin: 40px auto 0;
   padding: 0 20px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
 }
 
 .sales-header {
@@ -66,7 +70,7 @@ import products from '../stores/products.json'
 }
 
 .sales-header h1 {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
   color: #1a1a2e;
   margin: 0;
@@ -77,7 +81,7 @@ import products from '../stores/products.json'
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #2d7aff;
+  color: #3CC6F1;
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
@@ -90,7 +94,12 @@ import products from '../stores/products.json'
 }
 
 .all-sales:hover {
-  background: #2d7aff;
+  background: #3CC6F1;
+  color: #ffffff;
+  text-decoration: none;
+}
+.all-sales:active {
+  background: #2F323A;
   color: #ffffff;
   text-decoration: none;
 }
@@ -98,12 +107,10 @@ import products from '../stores/products.json'
 .all-sales img {
   width: 18px;
   height: 18px;
-  transition: transform 0.25s ease;
   filter: brightness(0) saturate(100%) invert(40%) sepia(100%) saturate(1000%) hue-rotate(200deg);
 }
 
 .all-sales:hover img {
-  transform: translateX(4px);
   filter: brightness(0) saturate(100%) invert(100%);
 }
 
@@ -197,33 +204,5 @@ import products from '../stores/products.json'
   color: #8b8d92;
   text-decoration: line-through;
   font-weight: 400;
-}
-
-.cart-btn {
-  height: 40px;
-  padding: 0 28px;
-  border: none;
-  border-radius: 6px;
-  background: #2d7aff;
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  align-self: flex-start;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  letter-spacing: 0.2px;
-}
-
-.cart-btn:hover {
-  background: #1a1a2e;
-  box-shadow: 0 4px 12px rgba(26, 26, 46, 0.15);
-  transform: translateY(-1px);
-}
-
-.cart-btn:active {
-  transform: scale(0.97);
 }
 </style>
