@@ -19,13 +19,14 @@
     </div>
 
     <div class="nav_between">
-      <img src="../src/images/Logo.svg" alt="">
+      <router-link to="/"><img src="../src/images/Logo.svg" alt=""></router-link>
 
       <div class="between_right">
+        <router-link to="/Catalogue">
         <button class="cat_btn">
           <img src="../src/images/cataloge_icon.svg" alt="">
           <a> Каталог</a>
-        </button>
+        </button></router-link>
 
         <form class="form">
           <input type="text" placeholder="Поиск">
@@ -108,6 +109,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 .allNavigation {

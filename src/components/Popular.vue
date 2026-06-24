@@ -11,10 +11,12 @@ export default defineComponent({
     <div class="popular-all">
       <div class="popular-FirstRow">
         <span class="popular-title">Популярные категории</span>
-        <button class="all-categories-btn">
-          <router-link to="/Catalogue"><span>Все категории</span></router-link>
+        <router-link to="/Catalogue">
+          <button class="all-categories-btn">
+          <span>Все категории</span>
           <img src="../images/rightArrow.svg" alt="Стрелка" class="arrow-icon" />
         </button>
+        </router-link>
       </div>
       <div class="categories-grid">
         <a href="#" class="category-item"><span class="category-name">Душевые</span>
@@ -71,19 +73,18 @@ export default defineComponent({
   </div>
 </template>
 
-<style>
+<style scoped>
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-width: 100%;
+
 }
 
 .page-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding: 20px;
 }
 
@@ -141,21 +142,6 @@ background: #2F323A;
   color: white;
   transition: 0.5ms;
 }
-
-.all-categories-btn img {
-  filter: brightness(0) saturate(100%) invert(40%) sepia(100%) saturate(1000%) hue-rotate(200deg);
-}
-
-.all-categories-btn:hover img {
-  filter: brightness(0) saturate(100%) invert(100%);
-}
-.all-categories-btn:active img {
-  filter: brightness(0) saturate(100%) invert(100%);
-}
-
-
-
-
 .categories-grid {
   display: flex;
   flex-wrap: wrap;
@@ -187,8 +173,6 @@ background: #2F323A;
 .category-icon {
   width: 180px;
   height: 120px;
-  object-fit: contain;
-  display: block;
 }
 
 .category-name {
@@ -197,5 +181,9 @@ background: #2F323A;
   color: black;
   text-align: center;
   line-height: 1.3;
+}
+.arrow-icon img{
+  width: 24px;
+  height: 24px;
 }
 </style>
