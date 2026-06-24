@@ -80,10 +80,9 @@ function scrollToLetter(letter: string) {
   </div>
 </template>
 
-
 <style scoped>
 .brands {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -104,30 +103,36 @@ function scrollToLetter(letter: string) {
 .brands__letter {
   width: 36px;
   height: 36px;
-
   border: none;
   border-radius: 999px;
-
   background: #f3f4f6;
   cursor: pointer;
+  transition: all 0.2s ease;
+  color: #8B8D92;
 }
 
+.brands__letter:hover {
+  background: #2F323A;
+  color: #fff;
+}
 
+.brands__letter.active {
+  background: #27b0d7;
+  color: #fff;
+}
 
 .brands__section {
   display: grid;
   grid-template-columns: 80px 1fr;
-
   gap: 32px;
-
   padding: 32px 0;
-
   border-bottom: 1px solid #eee;
 }
 
 .brands__title {
   font-size: 42px;
   font-weight: 700;
+  color: #2F323A;
 }
 
 .brands__grid {
@@ -140,9 +145,11 @@ function scrollToLetter(letter: string) {
   color: #333;
   text-decoration: none;
   transition: .2s;
+  padding: 4px 0;
 }
 
 .brands__item:hover {
   color: #27b0d7;
 }
+
 </style>

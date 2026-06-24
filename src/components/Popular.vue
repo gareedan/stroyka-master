@@ -12,7 +12,7 @@ export default defineComponent({
       <div class="popular-FirstRow">
         <span class="popular-title">Популярные категории</span>
         <button class="all-categories-btn">
-          <span>Все категории</span>
+          <router-link to="/Catalogue"><span>Все категории</span></router-link>
           <img src="../images/rightArrow.svg" alt="Стрелка" class="arrow-icon" />
         </button>
       </div>
@@ -71,11 +71,12 @@ export default defineComponent({
   </div>
 </template>
 
-<style scoped>
+<style>
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+width: 100%;
 }
 
 .page-wrapper {

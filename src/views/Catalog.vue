@@ -1,41 +1,39 @@
 <script>
-import Brend from "@/components/PopularBrend.vue";
-import BrandCataloge from "@/components/BrandCataloge.vue";
+import Sellers from "@/components/Sellers.vue";
+
 
 export default {
   components: {
-    Brend,
-    BrandCataloge,
+    Sellers,
   }
 }
 </script>
 
 <template>
   <div class="main">
-  <div class="mainBrand">
-    <div class="brandColumnFirst">
-      <a>Главная → Все продавцы</a>
-      <h1>Все бренды</h1>
-    </div>
-    <div class="brandColumn">
-      <img src="@/images/People/BrandPeople.svg" alt="">
+    <div class="mainBrand">
+      <div class="brandColumnFirst">
+        <a>Главная → Каталог</a>
+        <h1>Каталог</h1>
+      </div>
+      <div class="brandColumn">
+        <img src="@/images/People/CatalogPeople.svg" alt="">
+      </div>
     </div>
   </div>
+  <div>
+    <Sellers />
   </div>
-<div>
-  <Brend/>
-<BrandCataloge/>
-</div>
 </template>
 
 <style scoped>
+
 *{
   width: 100%;
-
+  font-family: Manrope, sans-serif;
 }
 .main{
   padding-top: 40px;
-  padding-bottom: 40px;
 }
 .mainBrand {
   width: 80%;
@@ -43,7 +41,7 @@ export default {
   display: flex;
   background: #F6F6F6;
   border-radius: 10px;
-align-items: center;
+  align-items: center;
 }
 .brandColumnFirst {
   display: flex;

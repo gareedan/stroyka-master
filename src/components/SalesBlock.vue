@@ -156,14 +156,17 @@ import Btn_Buy from '../components/ComponentsMini/Btn_Buy.vue'
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px;
-  background: #f8f9fc;
-  border-right: 1px solid #e8e9ea;
+  padding: 30px 20px;
+  background: white;
+max-height: 200px;
+  width: 100%;
+  border-bottom: 1px solid #E8E9EA;
 }
 
 .product-image img {
-  width: 120px;
-  height: 120px;
+  width: 100%;
+  max-width: 220px;
+  height: 200px;
   object-fit: contain;
 }
 
