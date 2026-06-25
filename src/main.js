@@ -8,6 +8,9 @@ import Delivery from './views/DeliveryView.vue'
 import Document from './views/DocumentView.vue'
 import Refund from './views/RefundView.vue'
 import Catalogue from './views/Catalog.vue'
+import Filters from './views/Filters.vue'
+import Product from './views/Product.vue'
+import Cart from './views/CartView.vue'
 
 const router = createRouter({
     routes: [
@@ -38,6 +41,18 @@ const router = createRouter({
         {
             path: '/Catalogue',
             component: Catalogue
+        },
+        {
+            path: '/Filters',
+            component: Filters
+        },
+        {
+            path: '/Product/:id',
+            component: Product
+        },
+        {
+            path: '/Cart',
+            component: Cart
         },
     ],
     history: createWebHistory()

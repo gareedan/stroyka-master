@@ -41,10 +41,10 @@
           <img src="../src/images/box_icon.svg" alt="">
           <a>Заказы</a>
         </div>
-        <div class="nav_betweenBlock">
+        <router-link to="/Cart"> <div class="nav_betweenBlock">
           <img src="../src/images/shop_icon.svg" alt="">
-          <a>Профиль</a>
-        </div>
+          <a>Корзина</a>
+        </div></router-link>
       </div>
     </div>
 
