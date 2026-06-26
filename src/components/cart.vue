@@ -34,7 +34,7 @@ const checkout = () => {
 
 <template>
   <div class="cart-page">
-    <h1 class="cart-title">Корзина</h1>
+
 
     <!-- Пустая корзина -->
     <div v-if="cartItems.length === 0" class="empty-cart">

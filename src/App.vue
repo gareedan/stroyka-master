@@ -19,7 +19,7 @@ export default {
         <router-link to="/Delivery">Доставка</router-link>
         <router-link to="/Refund">Возврат</router-link>
         <router-link to="/Document">Документация</router-link>
-        <router-link to="/Contact">Контакты </router-link>
+        <router-link to="/Сontact">Контакты </router-link>
       </div>
     </div>
 

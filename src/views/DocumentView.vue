@@ -5,7 +5,7 @@
 <template>
 <div class="ALL">
   <h1>Главная → Документация </h1>
-    <a>Документация</a>
+  <a>Документация</a>
 
     <div class="allDocument">
           <div class="DocumentBlock">

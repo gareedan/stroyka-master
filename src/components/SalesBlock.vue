@@ -22,12 +22,12 @@ import Btn_Buy from '../components/ComponentsMini/Btn_Buy.vue'
         <div class="badge">-{{ item.discount }}%</div>
 
         <div class="product-image">
-          <img :src="item.image" :alt="item.title" />
+          <img :src="item.image" :alt="item.name" />
         </div>
 
         <div class="product-info">
           <div class="product-title">
-            {{ item.title }}
+            {{ item.name }}
           </div>
 
           <div class="price-row">

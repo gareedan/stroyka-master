@@ -10,8 +10,8 @@ export default {
   <div class="main">
     <div class="mainBrand">
       <div class="brandColumnFirst">
-        <a>Главная → Заказы</a>
-        <h1>Заказы</h1>
+        <a>Главная → Корзина</a>
+        <h1>Корзина</h1>
       </div>
       <div class="brandColumn">
         <img src="@/images/People/shop.svg" alt="">

@@ -40,7 +40,7 @@
 }
 
 .about-company {
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
   margin: 40px auto 0;
   padding: 0 20px 20px 20px;
