@@ -15,12 +15,11 @@ export default {
   <div class="main">
     <div class="mainBrand">
       <div class="brandColumnFirst">
-        <a>Главная → Доставка</a>
-        <h1>Доставка</h1>
-        <h2>Доставка осуществляется курьерами поставщика<br> или службой курьеров Достависта. Также товар <br>можно забрать самостоятельно от поставщика.</h2>
+        <a>Главная → Каталог</a>
+        <h1>Каталог</h1>
       </div>
       <div class="brandColumn">
-        <img src="@/images/Item/car.svg" alt="">
+        <img src="@/images/People/CatalogPeople.svg" alt="">
       </div>
     </div>
   </div>
@@ -40,6 +39,7 @@ export default {
 .main{
   padding-top: 40px;
   padding-bottom: 40px;
+
 }
 .mainBrand {
   width: 80%;
@@ -48,12 +48,14 @@ export default {
   background: #F6F6F6;
   border-radius: 10px;
   align-items: center;
+  max-height: 232px ;
+  min-height: 232px ;
 }
 .brandColumnFirst {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 
 }
 .brandColumnFirst a{

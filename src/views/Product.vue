@@ -141,7 +141,6 @@ const handleRemoveFromCart = (item) => {
   align-items: center;
   justify-content: center;
   background: white;
-
   border-right: 1px solid #e8e9ea;
   max-width: 100%;
 }

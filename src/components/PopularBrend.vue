@@ -37,6 +37,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100%;
 }
 
 .brands-wrapper {
@@ -45,12 +46,8 @@
   align-items: center;
   width: 100%;
   padding: 20px;
-  margin: 0 20px;
 }
-.container img{
-  width: 184px;
-  height: 124px;
-}
+
 .container{
   max-width: 1200px;
   width: 100%;
@@ -106,7 +103,9 @@
 .Row{
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 </style>

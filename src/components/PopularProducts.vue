@@ -9,15 +9,15 @@ const formatPrice = (price) => {
 }
 
 const handleAddToCart = (item) => {
-  console.log('Товар добавлен в корзину:', item.title)
+  console.log('Товар добавлен в корзину:', item.name)
 }
 
 const handleUpdateCart = (item) => {
-  console.log('Количество обновлено:', item.title, 'x' + item.quantity)
+  console.log('Количество обновлено:', item.name, 'x' + item.quantity)
 }
 
 const handleRemoveFromCart = (item) => {
-  console.log('Товар удалён из корзины:', item.title)
+  console.log('Товар удалён из корзины:', item.name)
 }
 </script>
 
@@ -34,12 +34,12 @@ const handleRemoveFromCart = (item) => {
           class="product-card"
       >
         <div class="product-image">
-          <img :src="item.image" :alt="item.title" />
+          <img :src="item.image" :alt="item.name" />
         </div>
 
         <div class="product-info">
           <div class="product-title">
-            {{ item.title }}
+            {{ item.name }}
           </div>
 
           <div class="product-subtitle" v-if="item.subtitle">

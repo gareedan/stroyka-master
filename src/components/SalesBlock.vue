@@ -132,10 +132,7 @@ import Btn_Buy from '../components/ComponentsMini/Btn_Buy.vue'
   min-height: 180px;
 }
 
-.product-card:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  transform: translateY(-2px);
-}
+
 
 .badge {
   position: absolute;

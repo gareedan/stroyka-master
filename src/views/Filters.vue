@@ -311,6 +311,7 @@ const handleRemoveFromCart = (item) => {
   position: relative;
   height: 20px;
   margin-bottom: 4px;
+
 }
 
 .slider {
@@ -329,7 +330,7 @@ const handleRemoveFromCart = (item) => {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #3CC6F1;
+  background: #2F323A;
   cursor: pointer;
   pointer-events: auto;
   border: 2px solid white;

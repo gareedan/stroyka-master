@@ -43,7 +43,9 @@ export default {
   display: flex;
   background: #F6F6F6;
   border-radius: 10px;
-align-items: center;
+  align-items: center;
+  max-height: 232px ;
+  min-height: 232px ;
 }
 .brandColumnFirst {
   display: flex;

@@ -1,12 +1,17 @@
-<script setup>
+<script>
+import city from "@/components/ComponentsMini/city.vue";
+export default {
+  components: {
+    city,
+  }
+}
 </script>
 
 <template>
   <div class="allNavigation">
     <div class="nav_up">
       <div class="nav_upBtn">
-        <img src="../src/images/geo_icon.svg" alt="">
-        <a> Москва</a>
+        <city/>
       </div>
 
       <div class="nav_upText">
@@ -49,15 +54,15 @@
     </div>
 
     <div class="nav_down">
-      <a>Акции</a>
-      <a>Строительные материалы</a>
-      <a>Керамическая плитка</a>
-      <a>Краски</a>
-      <a>Сантехника</a>
-      <a>Напольные покрытия</a>
-      <a>Инструменты</a>
-      <a>Обои</a>
-      <a>Окна</a>
+      <router-link to="/"> <a>Акции</a></router-link>
+      <router-link to="/Catalogue"><a>Строительные материалы</a></router-link>
+        <router-link to="/Catalogue"><a>Керамическая плитка</a></router-link>
+          <router-link to="/Catalogue"><a>Краски</a></router-link>
+            <router-link to="/Catalogue"><a>Сантехника</a></router-link>
+              <router-link to="/Catalogue"><a>Напольные покрытия</a></router-link>
+                <router-link to="/Catalogue"><a>Инструменты</a></router-link>
+                  <router-link to="/Catalogue"><a>Обои</a></router-link>
+                    <router-link to="/Catalogue"><a>Окна</a></router-link>
     </div>
   </div>
 
@@ -74,13 +79,13 @@
         <a>Личный кабинет</a>
         <a>Заказы</a>
         <a>Избранное</a>
-        <a>Корзина</a>
+        <router-link to="/Cart"> <a>Корзина</a> </router-link>
       </div>
       <div class="column">
-        <a>Каталог</a>
-        <a>Акции</a>
+        <router-link to="/Catalogue"><a>Каталог</a></router-link>
+        <router-link to="/"><a>Акции</a></router-link>
         <router-link to="/Brend">Бренды</router-link>
-        <router-link to="/Contact">Контакты</router-link>
+        <router-link to="/Сontact">Контакты</router-link>
       </div>
       <div class="column">
         <a>Стать продавцом</a>
@@ -104,7 +109,7 @@
 }
 
 * {
-  max-width: 1920px; /* Изменено с 1440px на 1920px */
+  max-width: 100%; /* Изменено с 1440px на 1920px */
   font-family: 'Manrope', sans-serif;
   margin: 0;
   padding: 0;
@@ -262,9 +267,9 @@ form {
   justify-content: center;
   align-items: center;
   color: #454950;
-  gap: 48px; /* Увеличено с 30px для 1920px */
+  gap: 48px;
   font-size: 16px;
-  padding: 15px 40px; /* Добавлены боковые отступы */
+  padding: 15px 40px;
   border-bottom: 2px solid #F6F6F6;
 }
 
@@ -277,7 +282,7 @@ footer {
 .column {
   display: flex;
   flex-direction: column;
-  gap: 16px; /* Увеличено с 12px */
+  gap: 16px;
 }
 
 .logo {
@@ -286,7 +291,7 @@ footer {
 }
 
 .footer_up {
-  padding: 50px 40px; /* Увеличено и добавлены боковые отступы */
+  padding: 50px 40px;
   display: flex;
   flex-direction: row;
   gap: 200px; /* Увеличено с 150px */
@@ -301,7 +306,7 @@ footer a {
 }
 
 .footerBlock {
-  gap: 12px; /* Увеличено с 10px */
+  gap: 12px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -316,13 +321,16 @@ footer a {
   justify-content: center;
   padding: 40px 0;
   color: #5D6066;
-  gap: 200px; /* Увеличено с 168px */
-  width: 70%; /* Немного увеличено для 1920px */
+  gap: 200px;
+  width: 70%;
   margin: 0 auto;
 }
 
 .footer_down img {
   width: 268px;
   height: 36px;
+}
+.nav_down a{
+  color: #454950;
 }
 </style>
