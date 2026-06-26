@@ -1,10 +1,16 @@
 <script>
 import city from "@/components/ComponentsMini/city.vue";
+
 export default {
   components: {
     city,
-  }
-}
+  },
+  data() {
+    return {
+      burgerOpen: false,
+    };
+  },
+};
 </script>
 
 <template>
@@ -66,6 +72,83 @@ export default {
     </div>
   </div>
 
+
+
+
+  <div class="mobileNav">
+
+    <div class="mobileHeader">
+
+      <button class="burger" @click="burgerOpen = !burgerOpen">
+        <img src="@/images/cataloge_icon.svg" alt="">
+      </button>
+
+      <router-link to="/">
+        <img class="mobileLogo" src="@/images/Logo.svg" alt="">
+      </router-link>
+
+      <router-link to="/Cart">
+        <img class="cartIcon" src="@/images/shop_icon.svg" alt="">
+      </router-link>
+
+    </div>
+
+    <form class="mobileSearch">
+      <input type="text" placeholder="Поиск">
+      <button></button>
+    </form>
+
+    <transition name="slide">
+
+      <div
+          class="mobileMenu"
+          v-if="burgerOpen"
+      >
+
+        <router-link to="/Catalogue">
+          <button class="mobileCatalog">
+            <img src="@/images/cataloge_icon.svg">
+            Каталог
+          </button>
+        </router-link>
+
+        <div class="mobileBtn">
+          <img src="@/images/profile_icon.svg">
+          Профиль
+        </div>
+
+        <div class="mobileBtn">
+          <img src="@/images/box_icon.svg">
+          Заказы
+        </div>
+
+        <div class="mobileCity">
+          <city/>
+        </div>
+
+        <router-link to="/">Акции</router-link>
+        <router-link to="/Catalogue">Строительные материалы</router-link>
+        <router-link to="/Catalogue">Керамическая плитка</router-link>
+        <router-link to="/Catalogue">Краски</router-link>
+        <router-link to="/Catalogue">Сантехника</router-link>
+        <router-link to="/Catalogue">Напольные покрытия</router-link>
+        <router-link to="/Catalogue">Инструменты</router-link>
+        <router-link to="/Catalogue">Обои</router-link>
+        <router-link to="/Catalogue">Окна</router-link>
+
+        <hr>
+
+        <router-link to="/Brend">Бренды</router-link>
+        <router-link to="/Delivery">Доставка</router-link>
+        <router-link to="/Refund">Возврат</router-link>
+        <router-link to="/Document">Документация</router-link>
+        <router-link to="/Сontact">Контакты</router-link>
+
+      </div>
+
+    </transition>
+
+  </div>
   <router-view />
 
   <footer>
@@ -332,5 +415,149 @@ footer a {
 }
 .nav_down a{
   color: #454950;
+}
+.mobileNav{
+  display:none;
+}
+
+
+
+@media (max-width:375px){
+
+  .allNavigation{
+    display:none;
+  }
+
+  .mobileNav{
+    display:block;
+    position:relative;
+    width:100%;
+    background:#fff;
+  }
+
+  .mobileHeader{
+    height:64px;
+    display:flex;
+    align-items:center;
+    gap: 20px;
+    padding:0 16px;
+    border-bottom:1px solid #F3F3F3;
+  }
+
+  .burger{
+    width:32px;
+    height:32px;
+    border:none;
+    background:transparent;
+  }
+
+  .burger img{
+    width:22px;
+    filter: brightness(0);
+  }
+
+  .mobileLogo{
+    width:98px;
+  }
+
+  .cartIcon{
+    width:24px;
+  }
+
+  .mobileSearch{
+    width: calc(100% - 32px); /* 16px слева и справа */
+    margin: 12px 16px;
+    background: #F6F6F6;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    height: 44px;
+  }
+
+  .mobileSearch input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0 12px;
+    font-size: 14px;
+  }
+
+  .mobileSearch button{
+    width: 44px;
+    height: 44px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .mobileMenu{
+    position:absolute;
+    top:60px;
+    left:0;
+    width:250px;
+    height:calc(100vh - 120px);
+    background:#fff;
+    padding:12px 16px;
+    overflow:auto;
+
+    z-index:999;
+  }
+
+  .mobileCatalog{
+
+    width:100%;
+    height:48px;
+    border:none;
+    border-radius:8px;
+    background:#3CC6F1;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin:18px 0;
+  }
+  .mobileCatalog img{
+    width:22px;
+  }
+  .mobileBtn{
+    height:44px;
+    border:1px solid #E8E8E8;
+    border-radius:22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:12px;
+    color:#5D6066;
+  }
+  .mobileBtn img{
+    width:22px;
+  }
+  .mobileCity{
+    margin:18px 0;
+    color:#5D6066;
+  }
+  .mobileMenu a{
+    display:block;
+    color:#454950;
+    padding:10px 0;
+    font-size:15px;
+  }
+  .mobileMenu hr{
+    margin:16px 0;
+    border:none;
+    border-top:1px solid #E8E8E8;
+  }
+  .slide-enter-active,
+  .slide-leave-active{
+    transition:.25s;
+  }
+  .slide-enter-from,
+  .slide-leave-to{
+    transform:translateX(-100%);
+  }
 }
 </style>
