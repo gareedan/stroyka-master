@@ -35,9 +35,20 @@ export default {
     },
     goToSlide(index) {
       this.currentSlide = index
+    },
+    updateSlidesPerView() {
+      const wasMobile = this.slidesPerView === 1
+      this.slidesPerView = window.innerWidth <= 768 ? 1 : 2
+      const isMobile = this.slidesPerView === 1
+      if (wasMobile !== isMobile) {
+        this.currentSlide = 0
+      }
     }
   },
   mounted() {
+    this.updateSlidesPerView()
+    window.addEventListener('resize', this.updateSlidesPerView)
+
     setInterval(() => {
       if (this.currentSlide < this.slidesCount - 1) {
         this.currentSlide++
@@ -45,6 +56,9 @@ export default {
         this.currentSlide = 0
       }
     }, 8000)
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.updateSlidesPerView)
   }
 }
 </script>
@@ -78,18 +92,15 @@ export default {
     <div class="slider-container">
       <div
           class="slider-track"
-          :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
-      >
+          :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
         <div
             v-for="(reviewGroup, index) in groupedReviews"
             :key="index"
-            class="review-slide"
-        >
+            class="review-slide">
           <div
               v-for="item in reviewGroup"
               :key="item.id"
-              class="review-card"
-          >
+              class="review-card">
             <div class="review-author">
               <span class="author-icon">
                 <img src="@/images/Avatars.svg" alt="avatar" />
@@ -104,6 +115,7 @@ export default {
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -258,8 +270,6 @@ export default {
   word-wrap: break-word;
   white-space: pre-wrap;
 }
-
-/* Стили для скролла внутри карточки */
 .review-text::-webkit-scrollbar {
   width: 4px;
 }
@@ -272,5 +282,19 @@ export default {
 .review-text::-webkit-scrollbar-thumb {
   background: #c1c1c1;
   border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .review-slide {
+    grid-template-columns: 1fr;
+  }
+
+  .review-card {
+    min-height: auto;
+    padding: 24px 20px;
+  }
+
+  .reviews-header h2 {
+    font-size: 24px;
+  }
 }
 </style>

@@ -60,7 +60,6 @@ export default {
     }
   },
   mounted() {
-    // Подписка на изменения корзины
     this.cartInterval = setInterval(() => {
       const cart = useCart()
       const existingItem = cart.cartItems.value.find(i => i.id === this.item.id)
@@ -126,7 +125,6 @@ export default {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  letter-spacing: 0.2px;
   white-space: nowrap;
 }
 
@@ -153,7 +151,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
+  width: 18px;
   height: 100%;
   background: transparent;
   border: none;
@@ -194,7 +192,6 @@ export default {
 .quantity-controls {
   animation: fadeIn 0.25s ease;
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -205,4 +202,37 @@ export default {
     transform: scale(1);
   }
 }
+@media (max-width: 375px) {
+  .cart-btn {
+    padding: 10px 60px;
+    font-size: 15px;
+    min-width: 70px;
+  }
+
+  .add-to-cart-wrapper {
+    min-height: 30px;
+  }
+
+  .quantity-controls {
+    height: 30px;
+    min-width: 70px;
+    gap: 3px;
+  }
+
+  .qty-btn {
+    width: 44px;
+    min-width: 24px;
+  }
+
+  .qty-btn svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .qty-number {
+    min-width: 20px;
+    font-size: 12px;
+  }
+}
+
 </style>

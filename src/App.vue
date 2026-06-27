@@ -34,10 +34,10 @@ export default {
 
       <div class="between_right">
         <router-link to="/Catalogue">
-        <button class="cat_btn">
-          <img src="../src/images/cataloge_icon.svg" alt="">
-          <a> Каталог</a>
-        </button></router-link>
+          <button class="cat_btn">
+            <img src="../src/images/cataloge_icon.svg" alt="">
+            <a> Каталог</a>
+          </button></router-link>
 
         <form class="form">
           <input type="text" placeholder="Поиск">
@@ -62,18 +62,15 @@ export default {
     <div class="nav_down">
       <router-link to="/"> <a>Акции</a></router-link>
       <router-link to="/Catalogue"><a>Строительные материалы</a></router-link>
-        <router-link to="/Catalogue"><a>Керамическая плитка</a></router-link>
-          <router-link to="/Catalogue"><a>Краски</a></router-link>
-            <router-link to="/Catalogue"><a>Сантехника</a></router-link>
-              <router-link to="/Catalogue"><a>Напольные покрытия</a></router-link>
-                <router-link to="/Catalogue"><a>Инструменты</a></router-link>
-                  <router-link to="/Catalogue"><a>Обои</a></router-link>
-                    <router-link to="/Catalogue"><a>Окна</a></router-link>
+      <router-link to="/Catalogue"><a>Керамическая плитка</a></router-link>
+      <router-link to="/Catalogue"><a>Краски</a></router-link>
+      <router-link to="/Catalogue"><a>Сантехника</a></router-link>
+      <router-link to="/Catalogue"><a>Напольные покрытия</a></router-link>
+      <router-link to="/Catalogue"><a>Инструменты</a></router-link>
+      <router-link to="/Catalogue"><a>Обои</a></router-link>
+      <router-link to="/Catalogue"><a>Окна</a></router-link>
     </div>
   </div>
-
-
-
 
   <div class="mobileNav">
 
@@ -152,35 +149,55 @@ export default {
   <router-view />
 
   <footer>
-    <div class="footer_up">
-      <div class="column">
+    <div class="footer_grid">
+      <!-- Логотип и контакты -->
+      <div class="footer_col">
         <div class="logo"><img src="../src/images/LogoLight.svg" alt=""></div>
-        <div class="footerBlock"><img src="../src/images/mail_icon.svg" alt=""> <a>info@stroykastore.ru</a> </div>
-        <div class="footerBlock"><img src="../src/images/geo_iconLight.svg" alt=""> <a>Москва, ул.Камушкина 10</a> </div>
+        <div class="footerBlock"><img src="../src/images/mail_icon.svg" alt=""> <a>info@stroykastore.ru</a></div>
+        <div class="footerBlock"><img src="../src/images/geo_iconLight.svg" alt=""> <a>Москва, ул.Камушкина 10</a></div>
       </div>
-      <div class="column">
+
+      <!-- Десктоп колонки (скрыты на мобиле) -->
+      <div class="footer_col">
         <a>Личный кабинет</a>
         <a>Заказы</a>
         <a>Избранное</a>
-        <router-link to="/Cart"> <a>Корзина</a> </router-link>
+        <router-link to="/Cart"><a>Корзина</a></router-link>
       </div>
-      <div class="column">
+      <div class="footer_col">
         <router-link to="/Catalogue"><a>Каталог</a></router-link>
         <router-link to="/"><a>Акции</a></router-link>
         <router-link to="/Brend">Бренды</router-link>
         <router-link to="/Сontact">Контакты</router-link>
       </div>
-      <div class="column">
+      <div class="footer_col">
         <a>Стать продавцом</a>
         <router-link to="/Delivery">Доставка</router-link>
         <router-link to="/Refund">Возврат</router-link>
         <router-link to="/Document">Документация</router-link>
       </div>
     </div>
+
+    <!-- Мобильная сетка ссылок 2 колонки -->
+    <div class="footer_links_mobile" style="display: none; padding: 0 20px 28px; border-bottom: 1px solid #2e3340;">
+      <a>Личный кабинет</a>
+      <router-link to="/Brend">Бренды</router-link>
+      <a>Заказы</a>
+      <router-link to="/Сontact">Контакты</router-link>
+      <a>Избранное</a>
+      <a>Стать продавцом</a>
+      <router-link to="/Cart"><a>Корзина</a></router-link>
+      <router-link to="/Delivery">Доставка</router-link>
+      <router-link to="/Catalogue"><a>Каталог</a></router-link>
+      <router-link to="/Refund">Возврат</router-link>
+      <router-link to="/"><a>Акции</a></router-link>
+      <router-link to="/Document">Документация</router-link>
+    </div>
+
     <div class="footer_down">
-      <a>© СтройкаСтор</a>
       <img src="../src/images/card.svg" alt="">
-      <a>Cделано в KRUGLOV STUDIO</a>
+      <a>© СтройкаСтор</a>
+      <a>Сделано в KRUGLOV STUDIO</a>
     </div>
   </footer>
 </template>
@@ -192,7 +209,7 @@ export default {
 }
 
 * {
-  max-width: 100%; /* Изменено с 1440px на 1920px */
+  max-width: 100%;
   font-family: 'Manrope', sans-serif;
   margin: 0;
   padding: 0;
@@ -223,7 +240,7 @@ export default {
 .nav_upText {
   display: flex;
   flex-direction: row;
-  gap: 32px; /* Увеличено для лучшего распределения на 1920px */
+  gap: 32px;
   color: #5D6066;
   text-decoration: none;
 }
@@ -242,8 +259,8 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 800px; /* Увеличено с 620px для 1920px */
-  padding: 10px 40px 0 40px; /* Добавлены боковые отступы */
+  gap: 800px;
+  padding: 10px 40px 0 40px;
   color: #5D6066;
 }
 
@@ -254,7 +271,7 @@ export default {
 
 form {
   position: relative;
-  width: 544px; /* Увеличено с 444px для 1920px */
+  width: 544px;
   margin: 0 auto;
   background: #F6F6F6;
   border-radius: 10px;
@@ -340,7 +357,7 @@ form {
 .between_right {
   display: flex;
   flex-direction: row;
-  gap: 30px; /* Увеличено с 20px */
+  gap: 30px;
   align-items: center;
 }
 
@@ -356,36 +373,41 @@ form {
   border-bottom: 2px solid #F6F6F6;
 }
 
+/* --- ФУТЕР: ГРИД НА 4 КОЛОНКИ --- */
 footer {
   background-color: #171B24;
   color: #E8E9EA;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.column {
+.footer_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Четыре равные колонки */
+  gap: 40px;
+  width: 70%;
+  max-width: 1200px;
+  padding: 50px 0;
+  margin: 0 auto;
+}
+
+.footer_col {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.logo {
-  width: 98px;
-  height: 48px;
-}
-
-.footer_up {
-  padding: 50px 40px;
-  display: flex;
-  flex-direction: row;
-  gap: 200px; /* Увеличено с 150px */
-  align-items: flex-start; /* Выравнивание по верхнему краю для лучшего вида */
-  justify-content: center;
-}
-
-footer a {
+.footer_col a {
   text-decoration: none;
   color: #E8E9EA;
   font-size: 16px;
+}
+
+.logo {
+  width: 98px;
+  height: 48px;
 }
 
 .footerBlock {
@@ -413,68 +435,57 @@ footer a {
   width: 268px;
   height: 36px;
 }
+/* --- КОНЕЦ ФУТЕРА --- */
+
 .nav_down a{
   color: #454950;
 }
 .mobileNav{
   display:none;
 }
-
-
-
 @media (max-width:375px){
-
   .allNavigation{
     display:none;
   }
-
   .mobileNav{
     display:block;
     position:relative;
     width:100%;
     background:#fff;
   }
-
   .mobileHeader{
     height:64px;
     display:flex;
     align-items:center;
-    gap: 20px;
-    padding:0 16px;
+    justify-content: space-between;
+    padding:20px;
     border-bottom:1px solid #F3F3F3;
   }
-
   .burger{
     width:32px;
     height:32px;
     border:none;
     background:transparent;
   }
-
   .burger img{
     width:22px;
     filter: brightness(0);
   }
-
   .mobileLogo{
     width:98px;
   }
-
   .cartIcon{
     width:24px;
   }
-
   .mobileSearch{
-    width: calc(100% - 32px); /* 16px слева и справа */
+    width: calc(100% - 32px);
     margin: 12px 16px;
     background: #F6F6F6;
     border-radius: 8px;
-
     display: flex;
     align-items: center;
     height: 44px;
   }
-
   .mobileSearch input{
     flex: 1;
     border: none;
@@ -483,7 +494,6 @@ footer a {
     padding: 0 12px;
     font-size: 14px;
   }
-
   .mobileSearch button{
     width: 44px;
     height: 44px;
@@ -491,7 +501,6 @@ footer a {
     background: transparent;
     cursor: pointer;
   }
-
   .mobileMenu{
     position:absolute;
     top:60px;
@@ -501,12 +510,10 @@ footer a {
     background:#fff;
     padding:12px 16px;
     overflow:auto;
-
     z-index:999;
   }
 
   .mobileCatalog{
-
     width:100%;
     height:48px;
     border:none;
@@ -551,13 +558,55 @@ footer a {
     border:none;
     border-top:1px solid #E8E8E8;
   }
-  .slide-enter-active,
-  .slide-leave-active{
-    transition:.25s;
+  footer {
+    align-items: stretch;
   }
-  .slide-enter-from,
-  .slide-leave-to{
-    transform:translateX(-100%);
+
+  .footer_grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 28px 20px 0;
+    gap: 0;
+  }
+
+  /* Первая колонка — логотип и контакты */
+  .footer_col:first-child {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #2e3340;
+    margin-bottom: 24px;
+  }
+
+  /* Колонки 2, 3, 4 — объединяем в 2-колоночную сетку */
+  .footer_col:not(:first-child) {
+    display: none;
+  }
+
+  .footer_links_mobile {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 24px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #2e3340;
+  }
+
+  .footer_links_mobile a {
+    color: #E8E9EA;
+    font-size: 15px;
+    text-decoration: none;
+  }
+
+  .footer_down {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    padding: 24px 20px;
+    border-top: none;
+  }
+
+  .footer_down img {
+    width: 200px;
+    height: auto;
   }
 }
 </style>

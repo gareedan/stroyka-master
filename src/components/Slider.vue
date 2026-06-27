@@ -76,7 +76,6 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
-
 .HomeSlider {
   width: 100%;
   max-width: 1320px;
@@ -86,39 +85,38 @@ export default {
   border-radius: 10px;
   overflow: hidden;
 }
-
 .slider {
   width: 100%;
   height: 100%;
   overflow: hidden;
   position: relative;
 }
-
 .slides {
   display: flex;
   width: 100%;
   height: 100%;
   transition: transform 0.8s ease-in-out;
 }
-
 .slide {
   min-width: 100%;
   height: 100%;
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  padding: 40px 80px;
   background: #F6F6F6;
 }
-
 .slide-content {
   max-width: 400px;
   flex-shrink: 0;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .tag {
   display: inline-block;
-  font-size: 48px;
+  font-size:32px;
   font-weight: 600;
   color: #171B24;
   text-transform: uppercase;
@@ -127,7 +125,7 @@ export default {
 }
 
 .slide-content h2 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   color: #8b8d92;
   margin-bottom: 30px;
@@ -144,7 +142,7 @@ export default {
   border: none;
   padding: 14px 45px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -158,9 +156,6 @@ export default {
 .slide-content button:active {
   background: #171B24;
 }
-
-
-
 .slide-image img {
   width: 100%;
   height: 100%;
@@ -168,9 +163,7 @@ export default {
 .slide-imageSecond img {
   width: 100%;
   height: 100%;
-
 }
-
 .controls {
   position: absolute;
   bottom: 20px;
@@ -179,7 +172,6 @@ export default {
   gap: 12px;
   z-index: 10;
 }
-
 .controls button {
   width: 48px;
   height: 48px;
@@ -193,19 +185,86 @@ export default {
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-
 .controls button:hover {
   background: #f0f0f0;
   transform: scale(1.05);
 }
-
 .controls button:active {
   transform: scale(0.95);
 }
-
 .controls button img {
   width: 20px;
   height: 20px;
 }
-
+@media (max-width: 375px) {
+  *{
+    display: flex;
+  }
+  .HomeSlider {
+    width: 100%;
+    max-width: 100%;
+    height: 206px;
+    margin: 0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .slide {
+    display: flex;
+    align-items: stretch;
+    padding: 0;
+  }
+  .slide-content {
+    flex: 1;
+    min-width: 0;
+    padding: 20px 12px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+  }
+  .tag {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.15;
+    padding: 0;
+    margin-bottom: 4px;
+  }
+  .slide-content h2 {
+    font-size: 8px;
+    line-height: 1.4;
+    padding-left: 0;
+    margin-bottom: 8px;
+  }
+  .slide-content h2 br {
+    display: none;
+  }
+  .slide-content button {
+    padding: 10px 22px;
+    font-size: 14px;
+    align-self: flex-start;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+  .slide-image {
+    width: 42%;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .slide-image img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 80%;
+    width: auto;
+    max-width: none;
+    object-fit: cover;
+  }
+}
 </style>

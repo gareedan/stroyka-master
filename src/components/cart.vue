@@ -157,7 +157,7 @@ const checkout = () => {
   margin-bottom: 24px;
 }
 
-/* ── Пустая корзина ── */
+
 .empty-cart {
   text-align: center;
   padding: 80px 20px;
@@ -184,14 +184,14 @@ const checkout = () => {
   background: #2ab0d8;
 }
 
-/* ── Основной layout ── */
+
 .cart-layout {
   display: flex;
   gap: 32px;
   align-items: flex-start;
 }
 
-/* ── Summary (левый блок) ── */
+
 .cart-summary {
   flex: 0 0 260px;
   border: 1px solid #e8e9ea;
@@ -410,5 +410,78 @@ const checkout = () => {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+}
+@media (max-width: 480px) {
+  .cart-page {
+    padding: 16px 12px 40px;
+  }
+
+
+  .cart-layout {
+    flex-direction: column-reverse;
+    gap: 20px;
+
+  }
+
+  .cart-summary {
+    position: static;
+    flex: none;
+    width: 100%;
+    background-color: white;
+  }
+
+
+  .cart-item {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .item-image {
+    width: 100%;
+    height: 220px;
+    border-bottom: 1px solid #e8e9ea;
+  }
+
+  .item-body {
+    border-left: none;
+  }
+
+  .item-top {
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px 14px 0;
+  }
+
+  .item-name {
+    font-size: 15px;
+  }
+
+  .item-code {
+    text-align: left;
+    white-space: normal;
+    color: #8b8d92;
+    font-size: 13px;
+  }
+
+  .item-bottom {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .item-price {
+    font-size: 20px;
+  }
+
+  .item-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .remove-btn {
+    font-size: 16px;
+    text-align: center;
+    padding: 4px 0;
+  }
 }
 </style>

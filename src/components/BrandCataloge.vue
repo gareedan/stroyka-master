@@ -11,13 +11,9 @@ const alphabet = [
   'А','Б','Г','Д','Е','Ж','З','И','К','Л','М',
   'Н','О','П','Р','С','Т','У','Ф','Ш','Э','Я',
 ]
-
-// Типизация для брендов
 type BrandsType = {
   [key: string]: string[]
 }
-
-// Приводим brands к правильному типу
 const brandsData = brands as BrandsType
 
 function scrollToLetter(letter: string) {
@@ -152,4 +148,46 @@ function scrollToLetter(letter: string) {
   color: #27b0d7;
 }
 
+/* ТОЛЬКО АДАПТИВ ДЛЯ 375px */
+@media (max-width: 375px) {
+  .brands {
+    padding: 0 12px;
+  }
+
+  .brands__nav {
+    padding: 12px 0;
+    gap: 4px;
+  }
+
+  .brands__letter {
+    width: 32px;
+    height: 32px;
+    font-size: 11px;
+  }
+
+  .brands__section {
+    grid-template-columns: 50px 1fr;
+    gap: 16px;
+    padding: 20px 0;
+  }
+
+  .brands__title {
+    font-size: 28px;
+  }
+
+  .brands__grid {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .brands__item {
+    font-size: 14px;
+    padding: 6px 0;
+    border-bottom: 1px solid #f3f4f6;
+  }
+
+  .brands__item:last-child {
+    border-bottom: none;
+  }
+}
 </style>

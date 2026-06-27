@@ -118,7 +118,7 @@ const selectCity = (city) => {
   border-radius: 20px;
   padding: 32px 28px 28px;
   width: 520px;
-  max-width: calc(100vw - 32px);
+  max-width: 50%;
   max-height: 80vh;
   overflow-y: auto;
   animation: slideUp 0.2s ease;

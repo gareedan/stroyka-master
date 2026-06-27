@@ -71,4 +71,55 @@ export default {
 .brandColumn{
   max-width: 707px;
 }
+@media (max-width: 480px) {
+  .main {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .mainBrand {
+    width: calc(100% - 24px);
+    margin: 0 12px;
+    min-height: 160px;
+    max-height: 160px;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+  }
+
+  .brandColumnFirst {
+    align-items: flex-start;
+    gap: 10px;
+    width: 55%;
+    padding-top: 20px;
+    z-index: 1;
+    flex-shrink: 0;
+  }
+
+  .brandColumnFirst a {
+    font-size: 11px;
+    color: #8b8d92;
+    padding-left: 16px;
+  }
+
+  .brandColumnFirst h1 {
+    font-size: 24px;
+    padding-left: 16px;
+    padding-bottom: 0;
+  }
+
+  .brandColumn {
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+    max-width: 80%;
+    width: 80%;
+  }
+
+  .brandColumn img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
 </style>

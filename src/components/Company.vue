@@ -1,16 +1,17 @@
 <script setup>
-
 </script>
 
 <template>
   <div class="about-company">
     <div class="about-container">
-      <div class="about-image">
+      <div class="about-image about-image--desktop">
         <img src="@/images/hand.svg" alt="hand" />
       </div>
-
       <div class="about-content">
         <h1 class="about-title">О компании</h1>
+        <div class="about-image about-image--mobile">
+          <img src="@/images/hand.svg" alt="hand" />
+        </div>
         <div class="about-text">
           <p>
             В СтройкаСтор вы всегда можете купить все необходимые товары для ремонта дома и дачи.
@@ -59,7 +60,8 @@
   min-height: 340px;
 }
 
-.about-image {
+
+.about-image--desktop {
   flex: 0 0 45%;
   display: flex;
   align-items: center;
@@ -67,11 +69,25 @@
   overflow: hidden;
 }
 
-.about-image img {
+.about-image--desktop img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+/* Мобильное изображение — скрыто по умолчанию */
+.about-image--mobile {
+  display: none;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.about-image--mobile img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
 }
 
 .about-content {
@@ -99,5 +115,49 @@
 
 .about-text p:last-child {
   margin-bottom: 0;
+}
+
+
+@media (max-width: 480px) {
+  .about-company {
+    margin: 20px auto 0;
+    padding: 0 12px 16px 12px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    min-height: unset;
+    border-radius: 12px;
+  }
+
+
+  .about-image--desktop {
+    display: none;
+  }
+
+
+  .about-image--mobile {
+    display: block;
+    width: 50%;
+  }
+
+  .about-content {
+    padding: 24px 20px;
+  }
+
+  .about-title {
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+
+  .about-image--mobile {
+    margin-bottom: 16px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
 }
 </style>
